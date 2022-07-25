@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+body {
+    background: rgb(84,26,26);
+    background: linear-gradient(0deg, rgba(84,26,26,1) 0%, rgba(0,0,0,1) 30%);
+}
+
 /* VIDEO */
 .full-screen{
     width: 100%;
@@ -10,6 +15,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .full-screen video{
     display: flex;
     position: absolute;
@@ -40,12 +46,18 @@
     line-height: 80px;
     text-transform: uppercase;
 }
+
+
 /* HOUSES */
 .container-houses{
     display: flex;
     justify-content: center;
+    margin-top: 700px;
+
 }
-    
+.caja {
+    padding: 40px;
+}
 .container
 /* FOOTER */
 footer {
