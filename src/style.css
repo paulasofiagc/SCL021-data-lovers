@@ -49,6 +49,12 @@ body {
 
 
 /* HOUSES */
+
+h1 {
+    color: aliceblue;
+    font-family: 'Cormorant SC', serif;
+    font-size: 50px;
+}
 .container-houses{
     display: flex;
     justify-content: center;
@@ -62,4 +68,5 @@ body {
 /* FOOTER */
 footer {
     position: absolute;
+
 }
