@@ -1,4 +1,46 @@
 export default {
+  Houses: [
+    {
+      "id": 1,
+      "name": "Gryffindor",
+      "head_of_house": "Minerva McGonagall",
+      "colors": "Scarlet red and gold",
+      "representative animal": "Lion",
+      "founder": "Godric Gryffindor ",
+      "ghost": "Nearly Headless Nick",
+      "element": "Fire"
+    },
+    {
+      "id": 2,
+      "name": "Hufflepuff",
+      "head_of_house": "Pomona Sprout",
+      "colors": "Yellow and black",
+      "representative animal": "Badger",
+      "founder": "Helga Hufflepuff",
+      "ghost": "The Fat Friar",
+      "element": "Land"
+    },
+    {
+      "id": 3,
+      "name": "Ravenclaw",
+      "head_of_house": "Filius Flitwick",
+      "colors": "Blue and bronze",
+      "representative animal": "Eagle",
+      "founder": "Rowena Ravenclaw",
+      "ghost": "Gray Lady",
+      "element": "Air"
+    },
+    {
+      "id": 4,
+      "name": "Slytherin",
+      "head_of_house": "Severus Snape",
+      "colors": "Green and silver",
+      "representative animal": "Snake",
+      "founder": "Salazar Slytherin",
+      "ghost": "Bloodthirsty Baron",
+      "element": "Water"
+    },
+  ],
   characters: [
     {
       "id": 1,
