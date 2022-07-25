@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+/* VIDEO */
 .full-screen{
     width: 100%;
     height: 70%;
@@ -19,6 +20,7 @@
     object-fit: cover;
     z-index: -1;
 }
+/* NAV */
 .navegation {
     display: flex;
     justify-content: center;
@@ -27,11 +29,26 @@
     text-decoration: none;
     color: white;
     font-size: 30px;
-    font-family: 'Princess Sofia', cursive;
-    font-family: 'Sofia', cursive;
+    font-family: 'Cormorant SC', serif;
+    font-weight: bold;
+}
+.nav-menu-link:hover{
+    color: #f0c050;
 }
 .nav-menu-item {
     margin: 0 200px;
     line-height: 80px;
     text-transform: uppercase;
+}
+/* HOUSES */
+.container-houses{
+    display: flex;
+    justify-content: center;
+    
+
+}
+.container
+/* FOOTER */
+footer {
+    position: absolute;
 }
