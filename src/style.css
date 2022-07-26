@@ -7,7 +7,6 @@ body {
     background: linear-gradient(0deg, rgba(84,26,26,1) 0%, rgba(0,0,0,1) 30%);
     overflow-x: hidden;
 }
-
 /* VIDEO */
 .full-screen{
     width: 100%;
@@ -17,9 +16,7 @@ body {
     justify-content: center;
     max-width: 100%;
 }
-
-.full-screen video{
-    
+.full-screen video{   
     position: absolute;
     left: 0%;
     top: 0%;
@@ -30,8 +27,10 @@ body {
     width: auto; 
     height: auto;
     overflow: hidden;
-
-    
+}
+/*arreglo parcial*/
+img{
+    width: 100%;   
 }
 /* NAV */
 .navegation {
@@ -48,8 +47,9 @@ body {
 .nav-menu-link:hover{
     color: #f0c050;
 }
+/*Cambio en el margin para que encaje en pantalla pequeña*/
 .nav-menu-item {
-    margin: 0 200px;
+    margin: 0 100px;
     line-height: 80px;
     text-transform: uppercase;
 }
@@ -70,6 +70,10 @@ h1 {
 }
 .caja {
     padding: 40px;
+    transition: all 0.25s;
+}
+.caja:hover{
+    transform: translateY(-15px);
 }
 .container
 /* FOOTER */
@@ -77,3 +81,4 @@ footer {
     position: absolute;
 
 }
+
