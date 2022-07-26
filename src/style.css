@@ -87,7 +87,7 @@ img{
 .infoHufflepuff,
 .infoRavenclaw {
     width: 1000px;
-    height: 500px;
+    height: 1500px;
     max-width: 100%;
     padding: 30px 50px;
     border-radius: 5px;
@@ -146,4 +146,3 @@ footer {
     position: absolute;
 
 }
-
