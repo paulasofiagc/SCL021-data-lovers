@@ -33,6 +33,9 @@ body {
 
     
 }
+img {
+    width: 100%;
+}
 /* NAV */
 .navegation {
     display: flex;
@@ -49,11 +52,76 @@ body {
     color: #f0c050;
 }
 .nav-menu-item {
-    margin: 0 200px;
+    margin: 0 100px;
     line-height: 80px;
     text-transform: uppercase;
 }
 
+/* PRUEBA VENTANA MODAL */
+#openGriffyndor, 
+#openSlytherin,
+#openHufflepuff,
+#openRavenclaw {
+    background: none;
+    border: none;
+}
+.modal-containerG,
+.modal-containerS,
+.modal-containerH,
+.modal-containerR {
+    display: flex;
+    background-color: rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+.infoGriffyndor,
+.infoSlytherin,
+.infoHufflepuff,
+.infoRavenclaw {
+    width: 1000px;
+    height: 1500px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.infoGriffyndor {
+    background-color: #6A0000;
+}
+
+.infoSlytherin {
+    background-color: #001F07;
+}
+.infoHufflepuff {
+    background-color: #B78F00;
+}
+.infoRavenclaw {
+    background-color: #100029;
+}
+#close,
+#closeS,
+#closeH,
+#closeR {
+    width: 100%;
+    text-align: end;
+    font-size: 40px;
+    font-weight: bold;
+    background: none;
+    border: none;
+}
 
 /* HOUSES */
 
