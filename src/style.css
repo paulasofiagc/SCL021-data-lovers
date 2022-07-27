@@ -3,7 +3,8 @@
     padding: 0;
 }
 body {
-    background-color: black;
+    background: rgb(94,59,59);
+background: linear-gradient(0deg, rgba(94,59,59,1) 0%, rgba(0,0,0,1) 36%);
     overflow-x: hidden;
 }
 /*Slider*/
@@ -52,7 +53,7 @@ body {
 .navegation {
     display: flex;
     justify-content: center;
-    background-color: transparent;
+    background-color: black;
 }
 .nav-menu-link {
     text-decoration: none;
@@ -166,6 +167,7 @@ h1 {
     display: flex;
     justify-content: center;
     width: 100%;
+    background-color: black;
 }
 .caja {
     padding: 40px;
