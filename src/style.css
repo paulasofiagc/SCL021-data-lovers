@@ -9,6 +9,7 @@ background: linear-gradient(0deg, rgba(94,59,59,1) 0%, rgba(0,0,0,1) 36%);
 }
 /*Slider*/
 .slider{
+    display: grid;
     width: 100%;
     margin:auto;
     overflow: hidden;
@@ -52,8 +53,14 @@ background: linear-gradient(0deg, rgba(94,59,59,1) 0%, rgba(0,0,0,1) 36%);
 /* NAV */
 .navegation {
     display: flex;
-    justify-content: center;
-    background-color: black;
+    justify-content: space-between;
+    position: fixed;
+    width: auto;
+    min-width: 100%;
+    background: black;
+    opacity: 70%;
+    height: 100px;
+    align-items: center;
 }
 .nav-menu-link {
     text-decoration: none;
