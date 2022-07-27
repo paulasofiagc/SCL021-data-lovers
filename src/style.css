@@ -3,8 +3,7 @@
     padding: 0;
 }
 body {
-    background: rgb(84,26,26);
-    background: linear-gradient(0deg, rgba(84,26,26,1) 0%, rgba(0,0,0,1) 30%);
+    background-color: black;
     overflow-x: hidden;
 }
 /*Slider*/
@@ -70,6 +69,25 @@ body {
     margin: 0 50px;
     line-height: 80px;
     text-transform: uppercase;
+}
+h2{
+    color: #f0c050;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    font-size: 45px;
+    font-family: 'Harry Potter', sans-serif;
+}
+p{
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+/*character*/
+.character {
+    display:flex;
+    justify-content: center;
 }
 /* PRUEBA VENTANA MODAL */
 #openGriffyndor, 
