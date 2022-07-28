@@ -189,3 +189,10 @@ footer {
     position: absolute;
 
 }
+h3 {
+    margin-top: 25px;
+    color: #f0c050;
+    display: flex;
+    justify-content: center;
+    font-family: 'Harry Potter', sans-serif;
+}
