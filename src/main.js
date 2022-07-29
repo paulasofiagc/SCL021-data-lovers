@@ -14,6 +14,7 @@ return response.json();
     console.log(data)
 }) 
 
+
 const open = document.getElementById("openGriffyndor");
 const modal_containerG = document.getElementById("modal_containerG");
 const close = document.getElementById("close");
