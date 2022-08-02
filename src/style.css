@@ -97,7 +97,7 @@ p{
     display:flex;
     justify-content: center;
 }
-/* PRUEBA VENTANA MODAL */
+
 #openGriffyndor, 
 #openSlytherin,
 #openHufflepuff,
@@ -164,10 +164,14 @@ p{
 }
 
 /* HOUSES */
-
+p {
+    font-family: 'Mouse Memoirs', sans-serif;
+    color: #ffffff;
+    font-size: 35px;
+}
 h1 {
-    color: aliceblue;
-    font-family: 'Cormorant SC', serif;
+    color: rgb(157, 135, 22);
+    font-family: 'Harry Potter', sans-serif;
     font-size: 50px;
 }
 .container-houses{
@@ -176,12 +180,18 @@ h1 {
     width: 100%;
     background-color: black;
 }
+.container-houses img {
+    cursor: pointer;
+}
 .caja {
     padding: 40px;
     transition: all 0.25s;
 }
 .caja:hover{
     transform: translateY(-15px);
+}
+.caja img {
+    border-radius: 50px;
 }
 hr {
     margin: 25px;

@@ -4,15 +4,53 @@
 // // import data from './data/rickandmorty/rickandmorty.js';
 
 // console.log(example, data);
-let allCharacter;
+import data from "./data/harrypotter/data.js";
+console.log(data); // me muestra toda la data como objeto
 
-fetch("https://raw.githubusercontent.com/Seabird15/SCL021-data-lovers/main/src/data/harrypotter/harry.json")
-.then(function(response) {
-return response.json();
-}) //traer data
-.then(function(data) {
-    console.log(data)
-}) 
+
+
+const divRoot = document.querySelector(".infoGriffyndor");
+console.log(divRoot);
+
+let hola = "Gryffindor";
+const houses = data.Houses.filter((house) => house.name === hola);
+console.log(houses);
+
+const newDivTitle = document.createElement("div");
+const newH1Title = document.createElement("h1");
+const newTextTitle = document.createTextNode("Nombre: " + houses[0].name);
+const newUl = document.createElement("ul");
+    const newLi = document.createElement("p"); //Hijos de newUl     
+        const head = document.createTextNode("Head: " + houses[0].head_of_house);
+    const newLi2 = document.createElement("p");
+        const colors = document.createTextNode("Head: " + houses[0].colors);
+    const newLi3 = document.createElement("p");
+        const animal = document.createTextNode("Element: " + houses[0].representative_animal);
+    const newLi4 = document.createElement("p");
+        const founder = document.createTextNode("Element: " + houses[0].founder);
+    const newLi5 = document.createElement("p");
+        const ghost = document.createTextNode("Element: " + houses[0].ghost);
+    const newLi6 = document.createElement("p");
+        const element = document.createTextNode("Element: " + houses[0].element);
+
+divRoot.appendChild(newDivTitle);
+newDivTitle.appendChild(newH1Title);
+newH1Title.appendChild(newTextTitle);
+newDivTitle.appendChild(newUl);
+newUl.appendChild(newLi);
+newUl.appendChild(newLi2);
+newUl.appendChild(newLi3);
+newUl.appendChild(newLi4);
+newUl.appendChild(newLi5);
+newUl.appendChild(newLi6);
+newLi.appendChild(head);
+newLi2.appendChild(colors);
+newLi3.appendChild(animal);
+newLi4.appendChild(founder);
+newLi5.appendChild(ghost);
+newLi6.appendChild(element);
+
+
 
 
 const open = document.getElementById("openGriffyndor");
@@ -63,3 +101,20 @@ closeR.addEventListener("click", () => {
     modal_containerR.classList.remove("show");
 });
 
+
+//characters
+
+function showCharacters(characters) {
+    const filter = document.querySelector(".filter");
+    characters.forEach(function (person) {
+      let charactersH = document.createElement("h3");
+      let houseC = document.createElement("h5");
+      filter.innerHTML = "";
+      filter.appendChild(charactersH);
+      filter.appendChild(houseC);
+  
+      charactersH.innerText = person.name;
+      houseC.innerText = person.house;
+    });
+  }
+  showCharacters(data.characters.filter((person)=> person.house=== "Gryffindor"));
