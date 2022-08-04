@@ -3,8 +3,7 @@
     padding: 0;
 }
 body {
-    background: rgb(94,59,59);
-background: linear-gradient(0deg, rgba(94,59,59,1) 0%, rgba(0,0,0,1) 36%);
+    background: black;
     overflow-x: hidden;
 }
 /*Slider*/
@@ -15,7 +14,6 @@ background: linear-gradient(0deg, rgba(94,59,59,1) 0%, rgba(0,0,0,1) 36%);
     overflow: hidden;
     align-items: center;
     height: auto;
-    background: linear-gradient(white,black);
 }
 .logo{
     position: absolute;
@@ -54,7 +52,7 @@ background: linear-gradient(0deg, rgba(94,59,59,1) 0%, rgba(0,0,0,1) 36%);
 .navegation {
     display: flex;
     justify-content: space-between;
-    position: fixed;
+    position: absolute;
     width: auto;
     min-width: 100%;
     background: black;
@@ -184,7 +182,7 @@ h1 {
     cursor: pointer;
 }
 .caja {
-    padding: 40px;
+    padding: 20px;
     transition: all 0.25s;
 }
 .caja:hover{
@@ -201,7 +199,6 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    border: 1px solid rgb(252, 0, 0);
 }
 .product-container{
     margin: 15px;
@@ -222,14 +219,104 @@ hr {
 }
 /* FOOTER */
 footer {
+    background-color: #202020;
+    color: white;
+    width: 100%;
+    font-family: sans-serif;
+    bottom: 0;
+  }
+  .footerAll {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  .containerFooter {
     display: flex;
-    justify-content: center;
-
-}
-h3 {
-    margin-top: 25px;
-    color: #f0c050;
+    justify-content: space-between;
+  }
+  .textFooter {
+    max-width: 400px;
+  }
+  
+  .textFooter label {
+    font-size: 21px;
+  }
+  .textFooter p {
+    font-size: 18px;
+    color: #c7c7c7;
+    margin-top: 20px;
+    font-family: sans-serif;
+  }
+  .footer2 {
+    max-width: 400px;
+  }
+  .footer2 h3 {
+    font-size: 21px;
+  }
+  .row {
+    margin-top: 10px;
     display: flex;
-    justify-content: center;
-    font-family: 'Harry Potter', sans-serif;
-}
+  }
+  .row img {
+    width: 36px;
+    height: 36px;
+  }
+  .row label {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #c7c7c7;
+  }
+  .footerAuthors {
+    width: 100%;
+    background-color: #101010;
+  }
+  .footerC {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+  }
+  .Author {
+    color: #c7c7c7;
+  }
+  .lab {
+    color: #c7c7c7;
+  }
+  .lab a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+  }
+   .subscribe {
+    width: 400px;
+  }
+  .subscribe h3 {
+    font-size: 21px;
+  } 
+  .subscribe2 button {
+    padding: 10px;
+    width: 60%;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  .subscribe2 input{
+    width: 55%;
+    margin-top:10px;
+    padding:10px;
+  }
+  .subscribe2 button {
+    background-color: #c7940a;
+    color: #ffffff;
+  } 
+  @media screen and (max-width: 1100px) {
+    .containerFooter {
+      flex-wrap: wrap;
+    }
+    .footer2,
+    .footerAuthors,.subscribe {
+      margin-top: 20px;
+    }
+  }
