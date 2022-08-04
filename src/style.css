@@ -233,3 +233,20 @@ h3 {
     justify-content: center;
     font-family: 'Harry Potter', sans-serif;
 }
+
+select {
+
+    padding: 40px 90px;
+
+    border-radius: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(63, 12, 12);
+    color: #f1dd02;
+    font-size: 60px;
+    font-family: 'Mouse Memoirs', sans-serif;
+    cursor: pointer;
+}
+ 
+option {
+    cursor: pointer;
+}

@@ -23,13 +23,13 @@ const newUl = document.createElement("ul");
     const newLi = document.createElement("p"); //Hijos de newUl     
         const head = document.createTextNode("Head: " + houses[0].head_of_house);
     const newLi2 = document.createElement("p");
-        const colors = document.createTextNode("Head: " + houses[0].colors);
+        const colors = document.createTextNode("Colors: " + houses[0].colors);
     const newLi3 = document.createElement("p");
-        const animal = document.createTextNode("Element: " + houses[0].representative_animal);
+        const animal = document.createTextNode("Representative Animal: " + houses[0].representative_animal);
     const newLi4 = document.createElement("p");
-        const founder = document.createTextNode("Element: " + houses[0].founder);
+        const founder = document.createTextNode("Founder: " + houses[0].founder);
     const newLi5 = document.createElement("p");
-        const ghost = document.createTextNode("Element: " + houses[0].ghost);
+        const ghost = document.createTextNode("Ghoust: " + houses[0].ghost);
     const newLi6 = document.createElement("p");
         const element = document.createTextNode("Element: " + houses[0].element);
 
@@ -104,12 +104,16 @@ closeR.addEventListener("click", () => {
 
 //characters
 
+let personajes = document.getElementById("personajes").addEventListener("click", function(){
+    showCharacters()
+})
+
 function showCharacters(characters) {
     const filter = document.querySelector(".filter");
     characters.forEach(function (person) {
       let charactersH = document.createElement("h3");
       let houseC = document.createElement("h5");
-      filter.innerHTML = "";
+      filter.innerHTML = " ";
       filter.appendChild(charactersH);
       filter.appendChild(houseC);
   
@@ -118,3 +122,6 @@ function showCharacters(characters) {
     });
   }
   showCharacters(data.characters.filter((person)=> person.house=== "Gryffindor"));
+
+  let mostrarPers = document.getElementById("showcharacter")
+  
