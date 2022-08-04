@@ -9,13 +9,23 @@ console.log(data); // me muestra toda la data como objeto
 
 
 
-const divRoot = document.querySelector(".infoGriffyndor");
-console.log(divRoot);
+const divRoot = document.querySelector(".info");
+// console.log(divRoot);
 
 let hola = "Gryffindor";
-const houses = data.Houses.filter((house) => house.name === hola);
-console.log(houses);
+const houses = data.Houses.filter((house, index) => { 
+    if(house.name === "Gryffindor"){
+        showModal(index [0])
+    }else if
+    (house.name === "Slytherin"){
+        showModal(index [1])
+    }
 
+        
+});
+
+//console.log(houses);
+function showModal (index){ 
 const newDivTitle = document.createElement("div");
 const newH1Title = document.createElement("h1");
 const newTextTitle = document.createTextNode("Nombre: " + houses[0].name);
@@ -49,7 +59,7 @@ newLi3.appendChild(animal);
 newLi4.appendChild(founder);
 newLi5.appendChild(ghost);
 newLi6.appendChild(element);
-
+}
 
 
 
@@ -58,8 +68,10 @@ const modal_containerG = document.getElementById("modal_containerG");
 const close = document.getElementById("close");
 
 open.addEventListener("click", () => {
-    modal_containerG.classList.add("show");
-});
+    showModal()
+  });
+  
+
 
 close.addEventListener("click", () => {
     modal_containerG.classList.remove("show");
@@ -104,24 +116,24 @@ closeR.addEventListener("click", () => {
 
 //characters
 
-let personajes = document.getElementById("personajes").addEventListener("click", function(){
-    showCharacters()
-})
+// let personajes = document.getElementById("personajes").addEventListener("click", function(){
+//     showCharacters()
+// })
 
-function showCharacters(characters) {
-    const filter = document.querySelector(".filter");
-    characters.forEach(function (person) {
-      let charactersH = document.createElement("h3");
-      let houseC = document.createElement("h5");
-      filter.innerHTML = " ";
-      filter.appendChild(charactersH);
-      filter.appendChild(houseC);
+// function showCharacters(characters) {
+//     const filter = document.querySelector(".filter");
+//     characters.forEach(function (person) {
+//       let charactersH = document.createElement("h3");
+//       let houseC = document.createElement("h5");
+//       filter.innerHTML = " ";
+//       filter.appendChild(charactersH);
+//       filter.appendChild(houseC);
   
-      charactersH.innerText = person.name;
-      houseC.innerText = person.house;
-    });
-  }
-  showCharacters(data.characters.filter((person)=> person.house=== "Gryffindor"));
+//       charactersH.innerText = person.name;
+//       houseC.innerText = person.house;
+//     });
+//   }
+//   showCharacters(data.characters.filter((person)=> person.house=== "Gryffindor"));
 
-  let mostrarPers = document.getElementById("showcharacter")
+//   let mostrarPers = document.getElementById("showcharacter")
   

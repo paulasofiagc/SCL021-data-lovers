@@ -101,7 +101,7 @@ p{
 #openHufflepuff,
 #openRavenclaw {
     background: none;
-    border: none;
+    /*border: none;*/
 }
 .modal-containerG,
 .modal-containerS,
@@ -111,9 +111,9 @@ p{
     background-color: rgba(0,0,0,0.3);
     align-items: center;
     justify-content: center;
-    position: fixed;
+    /*position: fixed;*/
     pointer-events: none;
-    opacity: 0;
+    opacity: 0,1;
     top: 0;
     left: 0;
     height: 100vh;
@@ -123,10 +123,7 @@ p{
     pointer-events: auto;
     opacity: 1;
 }
-.infoGriffyndor,
-.infoSlytherin,
-.infoHufflepuff,
-.infoRavenclaw {
+.info {
     width: 1000px;
     height: 500px;
     max-width: 100%;
@@ -136,11 +133,11 @@ p{
     text-align: center;
 }
 
-.infoGriffyndor {
+.info {
     background-color: #6A0000;
 }
 
-.infoSlytherin {
+/* .infoSlytherin {
     background-color: #001F07;
 }
 .infoHufflepuff {
@@ -148,7 +145,7 @@ p{
 }
 .infoRavenclaw {
     background-color: #100029;
-}
+} */
 #close,
 #closeS,
 #closeH,
@@ -195,6 +192,13 @@ hr {
     margin: 25px;
 }
 /* cajita personajes */
+h3 {
+    margin-top: 25px;
+    color: #f0c050;
+    display: flex;
+    justify-content: center;
+    font-family: 'Harry Potter', sans-serif;
+}
 .page-content {
     display: flex;
     flex-wrap: wrap;
@@ -239,8 +243,10 @@ footer {
   .textFooter {
     max-width: 400px;
   }
-  
-  .textFooter label {
+  .textFooter h3 {
+    color: white;
+    font-family: sans-serif;
+    justify-content: start;
     font-size: 21px;
   }
   .textFooter p {
@@ -254,6 +260,9 @@ footer {
   }
   .footer2 h3 {
     font-size: 21px;
+    color: white;
+    font-family: sans-serif;
+    justify-content: start;
   }
   .row {
     margin-top: 10px;
@@ -294,7 +303,10 @@ footer {
     width: 400px;
   }
   .subscribe h3 {
+    color: white;
+    font-family: sans-serif;
     font-size: 21px;
+    justify-content: start;
   } 
   .subscribe2 button {
     padding: 10px;
