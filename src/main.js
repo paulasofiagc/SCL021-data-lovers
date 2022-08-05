@@ -112,6 +112,20 @@ openR.addEventListener("click", () => {
   });
 });
 
+//character 
+let characters = data.characters
+let personajesGryffindor = characters.filter(person => person.house === 'Gryffindor') 
+document.getElementById('submitGryffindor').addEventListener("click", function(){
+    document.getElementById('parrafo').innerHTML = JSON.stringify(personajesGryffindor)
+})
+
+console.log(personajesGryffindor)
+let personajesSlytherin = characters.filter(person => person.house === 'Slytherin') 
+document.getElementById('submitSlytherin').addEventListener("click", function(){
+    document.getElementById('parrafo').innerHTML = JSON.stringify(personajesSlytherin)
+})
+console.log(personajesSlytherin)
+
 
 //characters
 
