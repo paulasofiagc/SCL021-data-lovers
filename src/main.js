@@ -8,6 +8,9 @@
 import data from "./data/harrypotter/data.js";
 //console.log(data); 
 
+import {filterCharacterHouse,
+  showGender} from './data.js';
+
 const divRoot = document.querySelector(".info");
 // console.log(divRoot);
 
@@ -15,6 +18,8 @@ const divRoot = document.querySelector(".info");
 function showModal(house) {
   const newDivTitle = document.createElement("div");
   const newH1Title = document.createElement("h1");
+/*   const newImage = document.createElement("img");
+  newImage.setAttribute(house.image); */
   const newTextTitle = document.createTextNode("Name: " + house.name);
   const newButton = document.createElement("button");
   newButton.innerHTML = "X";
@@ -37,6 +42,8 @@ function showModal(house) {
   divRoot.innerHTML = "";
   divRoot.appendChild(newDivTitle);
   newDivTitle.appendChild(newButton);
+/*   newDivTitle.appendChild(newImage);
+  newImage.appendChild(houseimage); */
   newDivTitle.appendChild(newH1Title);
   newH1Title.appendChild(newTextTitle);
   newDivTitle.appendChild(newUl);
@@ -112,20 +119,31 @@ openR.addEventListener("click", () => {
   });
 });
 
-//character 
-let characters = data.characters
-let personajesGryffindor = characters.filter(person => person.house === 'Gryffindor') 
-document.getElementById('submitGryffindor').addEventListener("click", function(){
-    document.getElementById('parrafo').innerHTML = JSON.stringify(personajesGryffindor)
-})
+//character house
+let characters = data.characters;
+let submitGryffindor = document.getElementById("submitGryffindor");
+submitGryffindor.addEventListener("click", () => {
+  filterCharacterHouse(characters, "Gryffindor")
+}); 
 
-console.log(personajesGryffindor)
-let personajesSlytherin = characters.filter(person => person.house === 'Slytherin') 
-document.getElementById('submitSlytherin').addEventListener("click", function(){
-    document.getElementById('parrafo').innerHTML = JSON.stringify(personajesSlytherin)
-})
-console.log(personajesSlytherin)
+let submitSlytherin = document.getElementById("submitSlytherin");
+submitSlytherin.addEventListener("click", () => {
+  filterCharacterHouse(characters, "Slytherin")
+});
 
+let submitHufflepuff = document.getElementById("submitHufflepuff");
+submitHufflepuff.addEventListener("click", () => {
+  filterCharacterHouse(characters, "Hufflepuff")
+});
+
+let submitRavenclaw = document.getElementById("submitRavenclaw");
+submitRavenclaw.addEventListener("click", () => {
+  filterCharacterHouse(characters, "Ravenclaw")
+});
+// character gender
+
+let gender = document.getElementById("selectgenders");
+gender.addEventListener("change", showGender);
 
 //characters
 

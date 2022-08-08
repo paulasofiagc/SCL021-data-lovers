@@ -2,6 +2,7 @@ export default {
   Houses: [
     {
       "id": 1,
+      "image": "https://static.wikia.nocookie.net/esharrypotter/images/4/4b/Logo_Gryffindor_1.jpg/revision/latest/scale-to-width-down/108?cb=20160417160851",
       "name": "Gryffindor",
       "head_of_house": "Minerva McGonagall",
       "colors": "Scarlet red and gold",
