@@ -150,6 +150,7 @@ let submitSlytherin = document.getElementById("submitSlytherin");
 submitSlytherin.addEventListener("click", () => {
   let hP = filterCharacterHouse(characters, "Slytherin")
   showTemplate(hP)
+  
 });
 
 let submitHufflepuff = document.getElementById("submitHufflepuff");
@@ -163,7 +164,6 @@ submitRavenclaw.addEventListener("click", () => {
   let hP = filterCharacterHouse(characters, "Ravenclaw")
   showTemplate(hP)
 });
-
 
 // character gender
 
