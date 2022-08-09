@@ -3,17 +3,7 @@ import data from "./data/harrypotter/data.js";
 export function filterCharacterHouse (characters, house){ 
     characters.innerHTML = " ";
     let charactersHp = characters.filter(person => person.house === house) 
-    document.getElementById('parrafo').innerHTML = charactersHp.map (c =>
-        ` <div class="box">
-            <img>${c.image}</img>
-            <h5>Name: ${c.name}</h5>
-            <ul>
-            <li>Gender: ${c.gender}</li>
-            <li>Specie: ${c.species}</li>
-            <li>Birthd: ${c.birthd}</li>
-            <li>Books in which it appears: ${c.books_featured_in}</li>
-        </div>`
-    ).join('')
+    return(charactersHp)
 }
 
 

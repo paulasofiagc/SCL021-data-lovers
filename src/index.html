@@ -22,11 +22,11 @@
           <a href="#" class="nav-menu-link">Start</a>
         </li>
         <li class="nav-menu-item">
-          <a href="#" class="nav-menu-link">Houses</a>
+          <a href="#container-houses" class="nav-menu-link">Houses</a>
         </li>
         <img src="image/Logo-nav.png">
         <li class="nav-menu-item">
-          <a href="filter.html" class="nav-menu-link">Characters</a>
+          <a href="#galeria" class="nav-menu-link">Characters</a>
         </li>
         <li class="nav-menu-item">
           <a href="#" class="nav-menu-link">Spells</a>
@@ -47,10 +47,10 @@
   </header>
   
   <main>
-    <h2>HOUSES OF HOGWARTS</h2>
+    <h2 id="container-houses">HOUSES OF HOGWARTS</h2>
         <p>Click on the houses!! for information</p>
         <hr>
-    <section class="container-houses">s
+    <section class="container-houses">
       <div class="caja">
       <button type="button" id="openGriffyndor"> <img src="image/gryffindorgif.gif" height ="306px" width="299px" /></button>
       </div>
@@ -71,7 +71,7 @@
     </div>
     <hr class="barra-separadora">
     <section class="galeria">
-        <h2 class="galeria">CHARACTERS</h2>
+        <h2 class="galeria" id="galeria">CHARACTERS</h2>
         <p>Despliega los personajes por casa</p>
         <section class="character">
           <button class="submit" value="Gryffindor" id="submitGryffindor">Show Characters Gryffindor</button>
@@ -83,10 +83,14 @@
             <option value="Male">Male</option>
             <option value="Female">Female</option>
           </select>
-          
+          <select name="select" id="selectSort">
+            <option value="Select">Sort</option>
+            <option value="A-Z">Sort from A-Z</option>
+            <option value="Z-A">Sort from Z-A</option>
+          </select>
         </section>
       <div class="tarjetapersonaje"></div>
-      <p class="parrafo" id="parrafo"></p>
+      <p class="filterContent" id="filterContent"></p>
       <hr>
             <!-- cajita personajes -->
             <div class="page-content">
@@ -115,7 +119,9 @@
                   <img src="./image/lunalovegood.PNG" alt="">
               </div>
               </div>
+    </section>
               <br>
+  
   </main>
   <footer>
     <section class="footerAll">
@@ -165,5 +171,6 @@
   <script src="main.js" type="module"></script>
 </body>
 </html>
+
 
 
