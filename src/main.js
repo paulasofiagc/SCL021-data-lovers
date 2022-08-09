@@ -122,7 +122,7 @@ openR.addEventListener("click", () => {
 
 let characters = data.characters;
 function showTemplate(characters){
-  document.getElementById('parrafo').innerHTML = characters.map (c =>
+  document.getElementById('filterContent').innerHTML = characters.map (c =>
   ` <div class="box">
       <img class="img-houses ${c.house}"/>
       <h5>Name: ${c.name}</h5>

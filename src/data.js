@@ -23,3 +23,29 @@ export function showGender (event){
         </div>`
     ).join('')
 }
+
+export function sortAtoZ (){
+    let aZ = hogwart.sort(function (a,b) {
+        if (a.name > b.name){
+            return 1;
+        } 
+        if (a.name < b.name){
+            return -1;
+        }
+            return 0;
+        }
+    )
+    }
+    
+    
+    let zA =  hogwart.sort(function (a,b) {
+        if (a.name > b.name){
+            return -1;
+        } 
+        if (a.name < b.name){
+            return 1;
+        }
+            return 0;
+        }
+    )
+    
