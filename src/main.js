@@ -9,7 +9,8 @@ import data from "./data/harrypotter/data.js";
 //console.log(data); 
 
 import {filterCharacterHouse,
-  showGender} from './data.js';
+  showGender,
+  sortAtoZ} from './data.js';
 
 const divRoot = document.querySelector(".info");
 // console.log(divRoot);
@@ -119,51 +120,63 @@ openR.addEventListener("click", () => {
   });
 });
 
-//character house
 let characters = data.characters;
+function showTemplate(characters){
+  document.getElementById('filterContent').innerHTML = characters.map (c =>
+  ` <div class="box">
+      <img class="img-houses ${c.house}"/>
+      <h5>Name: ${c.name}</h5>
+      <ul>
+      <li>Gender: ${c.gender}</li>
+      <li>Specie: ${c.species}</li>
+      <li>Birthd: ${c.birthd}</li>
+      <li>Books in which it appears: ${c.books_featured_in}</li>
+      <li>House: ${c.house}</li>
+      </ul>
+  </div>`
+).join('')
+}
+
+
+//character house
+
 let submitGryffindor = document.getElementById("submitGryffindor");
 submitGryffindor.addEventListener("click", () => {
-  filterCharacterHouse(characters, "Gryffindor")
+  let hP = filterCharacterHouse(characters, "Gryffindor")
+  showTemplate(hP)
 }); 
 
 let submitSlytherin = document.getElementById("submitSlytherin");
 submitSlytherin.addEventListener("click", () => {
-  filterCharacterHouse(characters, "Slytherin")
+  let hP = filterCharacterHouse(characters, "Slytherin")
+  showTemplate(hP)
 });
 
 let submitHufflepuff = document.getElementById("submitHufflepuff");
 submitHufflepuff.addEventListener("click", () => {
-  filterCharacterHouse(characters, "Hufflepuff")
+  let hP = filterCharacterHouse(characters, "Hufflepuff")
+  showTemplate(hP)
 });
 
 let submitRavenclaw = document.getElementById("submitRavenclaw");
 submitRavenclaw.addEventListener("click", () => {
-  filterCharacterHouse(characters, "Ravenclaw")
+  let hP = filterCharacterHouse(characters, "Ravenclaw")
+  showTemplate(hP)
 });
+
+
 // character gender
 
 let gender = document.getElementById("selectgenders");
 gender.addEventListener("change", showGender);
 
-//characters
+// SORT
 
-// let personajes = document.getElementById("personajes").addEventListener("click", function(){
-//     showCharacters()
-// })
-
-// function showCharacters(characters) {
-//     const filter = document.querySelector(".filter");
-//     characters.forEach(function (person) {
-//       let charactersH = document.createElement("h3");
-//       let houseC = document.createElement("h5");
-//       filter.innerHTML = " ";
-//       filter.appendChild(charactersH);
-//       filter.appendChild(houseC);
-
-//       charactersH.innerText = person.name;
-//       houseC.innerText = person.house;
-//     });
-//   }
-//   showCharacters(data.characters.filter((person)=> person.house=== "Gryffindor"));
-
-//   let mostrarPers = document.getElementById("showcharacter")
+document.getElementById("selectSort").addEventListener("change", () => {
+  const selectSort = document.getElementById("selectSort");
+  const selectedValue = selectSort.value;
+  if (selectedValue === "A-Z"){
+  const resultSort = sortAtoZ() 
+  console.log(resultSort)
+  }
+})
