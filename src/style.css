@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+* {
+outline: 1px solid limegreen !important;
+}
 body {
   background: black;
   overflow-x: hidden;
@@ -93,13 +96,14 @@ p{
 /*character*/
 .character {
   display:flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-#openGriffyndor, 
-#openSlytherin,
-#openHufflepuff,
-#openRavenclaw {
+#openModalGryffindor, 
+#openModalSlytherin,
+#openModalHufflepuff,
+#openModalRavenclaw {
   background: none;
   /*border: none;*/
 }
@@ -182,9 +186,9 @@ hr {
 }
 /*BOTONES PARA FILTRAR*/
 .submit,
-#selectgenders {
+#selectgenders,
+#selectSort {
 background-color: white;
-font-size: 20px;
 font-family:sans-serif;
 text-align: center;
 font-weight: bold;
@@ -201,45 +205,53 @@ box-shadow: 0 12px 16px 0 rgba(212, 248, 10, 0.774), 0 17px 50px 0 rgba(255, 255
 }
 /*FILTROS POR CASA*/
 #filterContent {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
+display: flex;
+flex-wrap: wrap;
 }
 .box {
 display: grid;
+align-content: space-between;
 justify-items: center;
 border: solid;
-margin: 2px;
+border-radius: 30px;
+margin: 15px;
 margin-top: 25px;
-padding: 4px;
+padding: 20px;
 background-color:rgba(241, 81, 95, 0.194);
 font-size: 25px;
 }
 .box h5 {
-font-size: 40px;
+font-size: 100%;
 font-weight: lighter;
 color: #c7940a;
 }
 .box li {
 list-style: none;
+font-size: 90%;
 }
-/* .img-houses {
-content: url(/SCL021-data-lovers/src/image/Griffyndor.png);
-} */
+.img-houses {
+width: 30%;
+}
 .Gryffindor {
-content:  url(/src/image/Griffyndor.png);
+content:  url(/SCL021-data-lovers/src/image/Griffyndor.png);
 width: 40%;
 }
 .Slytherin {
-content: url(/src/image/Slytherin.png);
+content: url(/SCL021-data-lovers/src/image/Slytherin.png);
 width: 40%;
 }
 .Hufflepuff {
-content: url(/src/image/Hufflepuff.png);
+content: url(/SCL021-data-lovers/src/image/Hufflepuff.png);
 width: 40%;
 }
 .Ravenclaw {
-content: url(/src/image/Ravenclaw.png);
+content: url(/SCL021-data-lovers/src/image/Ravenclaw.png);
 width: 40%;
+}
+.null {
+content: url(/SCL021-data-lovers/src/image/sombrero3.png);
+width: 40%;
+background: none;
 }
 /* cajita personajes */
 h3 {
