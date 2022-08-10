@@ -1,4 +1,4 @@
-import data from "./data/harrypotter/data.js";
+
 //CHARACTER FILTER BY HOUSE
 export function filterCharacterHouse(characters, house) {
   let charactersHp = characters.filter((person) => person.house === house);

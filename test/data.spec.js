@@ -1,23 +1,45 @@
+import { filterCharacterHouse, showGender, sortAtoZ, sortZtoA } from '../src/data.js';
+
+describe('filterCharacterHouse', () => {
+    it('is a function', () => {
+     expect(typeof filterCharacterHouse).toBe('function');
+   });
 
 
+  //  it('returns `example`', () => {
+  //    expect(example()).toBe('example');
+  //  });
+ });
+ describe('showGender', () => {
+  it('is a function', () => {
+   expect(typeof showGender).toBe('function');
+ });
 
 
+//  it('returns `example`', () => {
+//    expect(example()).toBe('example');
+//  });
+});
+describe('sortAtoZ,', () => {
+  it('is a function', () => {
+   expect(typeof sortAtoZ,).toBe('function');
+ });
 
 
+//  it('returns `example`', () => {
+//    expect(example()).toBe('example');
+//  });
+});
+describe('sortZtoA,', () => {
+  it('is a function', () => {
+   expect(typeof sortZtoA,).toBe('function');
+ });
 
-// import { example, anotherExample } from '../src/data.js';
 
-
-// describe('example', () => {
-//   it('is a function', () => {
-//     expect(typeof example).toBe('function');
-//   });
-
-//   it('returns `example`', () => {
-//     expect(example()).toBe('example');
-//   });
-// });
-
+//  it('returns `example`', () => {
+//    expect(example()).toBe('example');
+//  });
+});
 
 // describe('anotherExample', () => {
 //   it('is a function', () => {
