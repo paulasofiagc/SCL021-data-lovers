@@ -1,32 +1,26 @@
-// import { example } from './data.js';
-// // import data from './data/lol/lol.js';
-// import data from './data/harrypotter/';
-// // import data from './data/rickandmorty/rickandmorty.js';
-
-// console.log(example, data);
-
 import data from "./data/harrypotter/data.js";
-//console.log(data); 
 
-import {filterCharacterHouse,
+import {
+  filterCharacterHouse,
   showGender,
-  sortAtoZ} from './data.js';
+  sortAtoZ,
+  sortZtoA,
+} from "./data.js";
 
 const divRoot = document.querySelector(".info");
-// console.log(divRoot);
 
-// ESTRUCTURA HTML DE VENTANA MODAL
+// HTML STRUCTURE OF MODAL WINDOW
 function showModal(house) {
   const newDivTitle = document.createElement("div");
   const newH1Title = document.createElement("h1");
-/*   const newImage = document.createElement("img");
+  /*   const newImage = document.createElement("img");
   newImage.setAttribute(house.image); */
-  const newTextTitle = document.createTextNode("Name: " + house.name);
+  const newTextTitle = document.createTextNode(house.name);
   const newButton = document.createElement("button");
   newButton.innerHTML = "X";
   newButton.id = "close";
   const newUl = document.createElement("ul");
-  const newLi = document.createElement("p"); //Hijos de newUl
+  const newLi = document.createElement("p"); 
   const head = document.createTextNode("Head: " + house.head_of_house);
   const newLi2 = document.createElement("p");
   const colors = document.createTextNode("Colors: " + house.colors);
@@ -43,7 +37,7 @@ function showModal(house) {
   divRoot.innerHTML = "";
   divRoot.appendChild(newDivTitle);
   newDivTitle.appendChild(newButton);
-/*   newDivTitle.appendChild(newImage);
+  /*   newDivTitle.appendChild(newImage);
   newImage.appendChild(houseimage); */
   newDivTitle.appendChild(newH1Title);
   newH1Title.appendChild(newTextTitle);
@@ -62,18 +56,17 @@ function showModal(house) {
   newLi6.appendChild(element);
 }
 
-// BOTONES DE CASAS 
-const open = document.getElementById("openGriffyndor");
-const openS = document.getElementById("openSlytherin");
-const openH = document.getElementById("openHufflepuff");
-const openR = document.getElementById("openRavenclaw");
+// SHOW MODAL WINDOW ACCORDING TO SELECTED BUTTON
+const openModalGryffindor = document.getElementById("openModalGryffindor");
+const openModalSlytherin = document.getElementById("openModalSlytherin");
+const openModalHufflepuff = document.getElementById("openModalHufflepuff");
+const openModalRavenclaw = document.getElementById("openModalRavenclaw");
 
-open.addEventListener("click", () => {
+openModalGryffindor.addEventListener("click", () => {
   divRoot.classList.add("show");
   const selectedHouse = data.Houses.filter(
     (house) => house.name === "Gryffindor"
   );
-  console.log(selectedHouse[0]);
   showModal(selectedHouse[0]);
   const close = document.getElementById("close");
   close.addEventListener("click", () => {
@@ -81,12 +74,11 @@ open.addEventListener("click", () => {
   });
 });
 
-openS.addEventListener("click", () => {
+openModalSlytherin.addEventListener("click", () => {
   divRoot.classList.add("show");
   const selectedHouse = data.Houses.filter(
     (house) => house.name === "Slytherin"
   );
-  console.log(selectedHouse[0]);
   showModal(selectedHouse[0]);
   const close = document.getElementById("close");
   close.addEventListener("click", () => {
@@ -94,12 +86,11 @@ openS.addEventListener("click", () => {
   });
 });
 
-openH.addEventListener("click", () => {
+openModalHufflepuff.addEventListener("click", () => {
   divRoot.classList.add("show");
   const selectedHouse = data.Houses.filter(
     (house) => house.name === "Hufflepuff"
   );
-  console.log(selectedHouse[0]);
   showModal(selectedHouse[0]);
   const close = document.getElementById("close");
   close.addEventListener("click", () => {
@@ -107,12 +98,11 @@ openH.addEventListener("click", () => {
   });
 });
 
-openR.addEventListener("click", () => {
+openModalRavenclaw.addEventListener("click", () => {
   divRoot.classList.add("show");
   const selectedHouse = data.Houses.filter(
     (house) => house.name === "Ravenclaw"
   );
-  console.log(selectedHouse[0]);
   showModal(selectedHouse[0]);
   const close = document.getElementById("close");
   close.addEventListener("click", () => {
@@ -120,63 +110,86 @@ openR.addEventListener("click", () => {
   });
 });
 
+// HTML CHARACTERS
 let characters = data.characters;
-function showTemplate(characters){
-  document.getElementById('filterContent').innerHTML = characters.map (c =>
-  ` <div class="box">
-      <img class="img-houses ${c.house}"/>
-      <h5>Name: ${c.name}</h5>
-      <ul>
-      <li>Gender: ${c.gender}</li>
-      <li>Specie: ${c.species}</li>
-      <li>Birthd: ${c.birthd}</li>
-      <li>Books in which it appears: ${c.books_featured_in}</li>
-      <li>House: ${c.house}</li>
-      </ul>
-  </div>`
-).join('')
+function showTemplate(characters) {
+  document.getElementById("filterContent").innerHTML = characters
+    .map(
+      (c) =>
+        ` <div class="box">
+        <img class="img-houses ${c.house}"/>
+        <h5>Name: ${c.name}</h5>
+        <ul>
+        <li>Gender: ${c.gender}</li>
+        <li>Specie: ${c.species}</li>
+        <li>Birthd: ${c.birthd}</li>
+        <li>Books in which it appears: ${c.books_featured_in}</li>
+        <li>House: ${c.house}</li>
+        </ul>
+    </div>`
+    )
+    .join("");
 }
 
+// SHOW ALL CHARACTERS
+let submitAll = document.getElementById("submitAll")
+submitAll.addEventListener("click", () => {
+  showTemplate(characters)
+});
 
-//character house
+//FILTER AND SHOW CHARACTERS ACCORDGIN TO SELECTED HOUSE
 
 let submitGryffindor = document.getElementById("submitGryffindor");
 submitGryffindor.addEventListener("click", () => {
-  let hP = filterCharacterHouse(characters, "Gryffindor")
-  showTemplate(hP)
-}); 
+  let hP = filterCharacterHouse(characters, "Gryffindor");
+  showTemplate(hP);
+});
 
 let submitSlytherin = document.getElementById("submitSlytherin");
 submitSlytherin.addEventListener("click", () => {
-  let hP = filterCharacterHouse(characters, "Slytherin")
-  showTemplate(hP)
-  
+
+  let hP = filterCharacterHouse(characters, "Slytherin");
+  showTemplate(hP);
+
+
 });
 
 let submitHufflepuff = document.getElementById("submitHufflepuff");
 submitHufflepuff.addEventListener("click", () => {
-  let hP = filterCharacterHouse(characters, "Hufflepuff")
-  showTemplate(hP)
+  let hP = filterCharacterHouse(characters, "Hufflepuff");
+  showTemplate(hP);
 });
 
 let submitRavenclaw = document.getElementById("submitRavenclaw");
 submitRavenclaw.addEventListener("click", () => {
-  let hP = filterCharacterHouse(characters, "Ravenclaw")
-  showTemplate(hP)
+  let hP = filterCharacterHouse(characters, "Ravenclaw");
+  showTemplate(hP);
 });
 
-// character gender
+
+// FILTER AND SHOW CHARACTERS ACCORDGIN TO SELECTED GENDER
+
+
+
 
 let gender = document.getElementById("selectgenders");
-gender.addEventListener("change", showGender);
+gender.addEventListener("change", (event) => {
+  const selectedGender = event.target.value;
+  let result = showGender(characters, selectedGender);
+  showTemplate(result);
+});
 
-// SORT
+// SORT AND SHOW CHARACTERS ACCORDGIN TO SELECTED SORT
 
 document.getElementById("selectSort").addEventListener("change", () => {
   const selectSort = document.getElementById("selectSort");
   const selectedValue = selectSort.value;
-  if (selectedValue === "A-Z"){
-  const resultSort = sortAtoZ() 
-  console.log(resultSort)
+
+  if (selectedValue === "A-Z") {
+    const result = sortAtoZ(characters);
+    showTemplate(result);
+  } else {
+    const result2 = sortZtoA(characters);
+    showTemplate(result2);
   }
-})
+});

@@ -1,51 +1,42 @@
 import data from "./data/harrypotter/data.js";
-//FILTRO PERSONAJES POR CASA
-export function filterCharacterHouse (characters, house){ 
-    characters.innerHTML = " ";
-    let charactersHp = characters.filter(person => person.house === house) 
-    return(charactersHp)
+//CHARACTER FILTER BY HOUSE
+export function filterCharacterHouse(characters, house) {
+  let charactersHp = characters.filter((person) => person.house === house);
+  return charactersHp;
 }
 
-
-let hogwart = data.characters;
-
-export function showGender (event){
-    let genders = hogwart.filter( person => person.gender === "Male" ? person.gender === this.value : person.gender !== "Male")
-    document.getElementById('parrafo').innerHTML = genders.map (c =>
-        `<div class="box">
-            <h5>Name: ${c.name}</h5>
-            <ul>
-            <li>Gender: ${c.gender}</li>
-            <li>Specie: ${c.species}</li>
-            <li>Birthd: ${c.birthd}</li>
-            <li>Books in which it appears: ${c.books_featured_in}</li>
-
-        </div>`
-    ).join('')
+//CHARACTER FILTER BY GENDER
+export function showGender(character, gender) {
+  let charactersByGender = character.filter(
+    (person) => person.gender === gender
+  );
+  return charactersByGender;
 }
 
-export function sortAtoZ (){
-    let aZ = hogwart.sort(function (a,b) {
-        if (a.name > b.name){
-            return 1;
-        } 
-        if (a.name < b.name){
-            return -1;
-        }
-            return 0;
-        }
-    )
+//SORT CHARACTERS A TO Z
+export function sortAtoZ(charactersName) {
+  const sort = charactersName.sort(function (a, b) {
+    if (a.name > b.name) {
+      return 1;
     }
-    
-    
-    let zA =  hogwart.sort(function (a,b) {
-        if (a.name > b.name){
-            return -1;
-        } 
-        if (a.name < b.name){
-            return 1;
-        }
-            return 0;
-        }
-    )
-    
+    if (a.name < b.name) {
+      return -1;
+    }
+    return 0;
+  });
+  return sort;
+}
+
+//SORT CHARACTERS Z TO A
+export function sortZtoA(charactersName) {
+  let zToA = charactersName.sort(function (a, b) {
+    if (a.name > b.name) {
+      return -1;
+    }
+    if (a.name < b.name) {
+      return 1;
+    }
+    return 0;
+  });
+  return zToA;
+}
