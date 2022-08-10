@@ -238,23 +238,23 @@ font-size: 90%;
 width: 30%;
 }
 .Gryffindor {
-content:  url(/SCL021-data-lovers/src/image/Griffyndor.png);
+content:  url(/src/image/Griffyndor.png);
 width: 40%;
 }
 .Slytherin {
-content: url(/SCL021-data-lovers/src/image/Slytherin.png);
+content: url(/src/image/Slytherin.png);
 width: 40%;
 }
 .Hufflepuff {
-content: url(/SCL021-data-lovers/src/image/Hufflepuff.png);
+content: url(/src/image/Hufflepuff.png);
 width: 40%;
 }
 .Ravenclaw {
-content: url(/SCL021-data-lovers/src/image/Ravenclaw.png);
+content: url(/src/image/Ravenclaw.png);
 width: 40%;
 }
 .null {
-content: url(/SCL021-data-lovers/src/image/sombrero3.png);
+content: url();
 width: 40%;
 background: none;
 }
