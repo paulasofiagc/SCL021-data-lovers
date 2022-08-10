@@ -147,8 +147,11 @@ submitGryffindor.addEventListener("click", () => {
 
 let submitSlytherin = document.getElementById("submitSlytherin");
 submitSlytherin.addEventListener("click", () => {
+
   let hP = filterCharacterHouse(characters, "Slytherin");
   showTemplate(hP);
+
+
 });
 
 let submitHufflepuff = document.getElementById("submitHufflepuff");
@@ -163,7 +166,12 @@ submitRavenclaw.addEventListener("click", () => {
   showTemplate(hP);
 });
 
+
 // FILTER AND SHOW CHARACTERS ACCORDGIN TO SELECTED GENDER
+
+
+
+
 let gender = document.getElementById("selectgenders");
 gender.addEventListener("change", (event) => {
   const selectedGender = event.target.value;
