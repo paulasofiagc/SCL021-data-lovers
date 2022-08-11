@@ -160,7 +160,7 @@ submitAll.addEventListener("click", () => {
 let submitGryffindor = document.getElementById("submitGryffindor");
 submitGryffindor.addEventListener("click", () => {
   let hP = filterCharacterHouse(characters, "Gryffindor");
-  showTemplate(hP);np
+  showTemplate(hP);
 });
 /*
 function fn1(e){

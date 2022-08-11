@@ -608,7 +608,13 @@ footer {
 #submitRavenclaw:hover{
   background-color: blue;
 }
-
+button#openModalGryffindor,
+#openModalSlytherin,
+#openModalHufflepuff,
+#openModalRavenclaw{
+  border:none;
+  
+}
    
 
 
