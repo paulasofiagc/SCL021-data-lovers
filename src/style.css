@@ -506,17 +506,21 @@ footer {
   .footerAuthors,
   .subscribe {
     margin-top: 20px;
+  
   }
 }
 /*Media para pantallas pequeñas*/
 @media screen and (max-width: 800px) {
+  h2 { 
+    font-size: 30px;
+  }
   .logoNav {
     visibility: hidden;
   }
   nav {
     position: fixed;
     z-index: 3;
-    height: 15%;
+    height: 10%; /*nav 10%*/
   }
   .hamburger {
     display: block;
