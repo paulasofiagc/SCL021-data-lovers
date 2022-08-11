@@ -2,92 +2,262 @@
   margin: 0;
   padding: 0;
 }
+/*
 * {
-/* outline: 1px solid limegreen !important; */
-}
+ outline: 1px solid limegreen !important; 
+}*/
+
 body {
   background: black;
   overflow-x: hidden;
 }
 /*Slider*/
-.slider{
+.slider {
   display: grid;
   width: 100%;
-  margin:auto;
+  margin: auto;
   overflow: hidden;
   align-items: center;
   height: auto;
 }
-.logo{
+.logo {
   position: absolute;
   width: 100%;
   margin-top: 100px;
   align-content: center;
 }
-.slider ul{
-  padding:0;
+.slider ul {
+  padding: 0;
   display: flex;
   width: 400%;
   animation: cambio 20s infinite alternate;
   animation-timing-function: ease-out;
-}   
-.slider li{
+}
+.slider li {
   width: 100%;
   list-style: none;
 }
-.slider img{
+.slider img {
   width: 100%;
 }
-@keyframes cambio{
-  0% { margin-left: 0; }
-  20% { margin-left: 0; }
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
 
-  25% { margin-left: -100%; }
-  45% { margin-left: -100%; }
-  
-  50% { margin-left: -200%; }
-  70% { margin-left: -200%; }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
 
-  75% { margin-left: -300%; }
-  100% { margin-left: -300%; }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
 }
 /* NAV */
-.navegation {
+nav {
+  height: 6rem;
+  width: 100vw;
+  background-color: #131418;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
   display: flex;
-  justify-content: space-between;
   position: absolute;
-  width: auto;
-  min-width: 100%;
-  background: black;
-  opacity: 70%;
-  height: 100px;
-  align-items: center;
-}
-.nav-menu-link {
-  text-decoration: none;
+  z-index: 10;
   color: white;
-  font-size: 30px;
-  font-family: 'Cormorant SC', serif;
-  font-weight: bold;
-  
 }
-.nav-menu-link:hover{
-  color: #f0c050;
+
+/*Styling logo*/
+.logoNav {
+  padding: 1vh 1vw;
+  text-align: center;
 }
-.nav-menu-item {
-  margin: 0 50px;
-  line-height: 80px;
+.logoNav img {
+  height: 5rem;
+  width: 20rem;
+}
+
+/*Styling Links*/
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 88vw;
+  padding: 0 0.7vw;
+  font-family: "Cormorant SC", serif;
+  justify-content: space-evenly;
+  align-items: center;
   text-transform: uppercase;
+  color: white;
 }
-h2{
+.nav-links li a {
+  text-decoration: none;
+  margin: 0 0.7vw;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+.nav-links li a:hover {
+  color: #ebbf31;
+}
+.nav-links li {
+  position: relative;
+}
+.nav-links li a::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0%;
+  background-color: rgb(206, 158, 1);
+  position: absolute;
+  transition: all ease-in-out 250ms;
+  margin: 0 0 0 10%;
+  color: #c7940a;
+}
+.nav-links li a:hover::before {
+  width: 80%;
+}
+
+/*Styling Buttons*/
+.login-button {
+  background-color: transparent;
+  border: 1.5px solid #f2f5f7;
+  border-radius: 2em;
+  padding: 0.6rem 0.8rem;
+  margin-left: 2vw;
+  font-size: 1rem;
+  cursor: pointer;
+  color: white;
+}
+.login-button:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1.5px solid #f2f5f7;
+  transition: all ease-in-out 350ms;
+}
+.join-button {
+  color: #ffffff;
+  background-color: #c7940a;
+  border: 1.5px solid #000000;
+  border-radius: 2em;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.join-button:hover {
+  color: #f2f5f7;
+  background-color: transparent;
+  border: 1.5px solid #ffffff;
+  transition: all ease-in-out 350ms;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background: #f2f5f7;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.hamburger {
+  display: none;
+}
+
+/*Media para pantallas pequeñas*/
+@media screen and (max-width: 800px) {
+  nav {
+    position: fixed;
+    z-index: 3;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.7s ease;
+  }
+  .nav-links {
+    position: fixed;
+    background: #020202;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(50px at 90% -20%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+  .nav-links li:nth-child(4) {
+    transition: all 0.5s ease 0.7s;
+  }
+  .nav-links li:nth-child(5) {
+    transition: all 0.5s ease 0.8s;
+  }
+  .nav-links li:nth-child(6) {
+    transition: all 0.5s ease 0.9s;
+    margin: 0;
+  }
+  .nav-links li:nth-child(7) {
+    transition: all 0.5s ease 1s;
+    margin: 0;
+  }
+  li.fade {
+    opacity: 1;
+  }
+}
+/*Animation Hamburger Icon*/
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  transition: all 0.7s ease;
+  width: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+h2 {
   color: #f0c050;
   display: flex;
   justify-content: center;
   margin-top: 80px;
   font-size: 45px;
-  font-family: 'Harry Potter', sans-serif;
+  font-family: "Harry Potter", sans-serif;
 }
-p{
+p {
   color: aliceblue;
   display: flex;
   justify-content: center;
@@ -95,12 +265,12 @@ p{
 }
 /*character*/
 .character {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-#openModalGryffindor, 
+#openModalGryffindor,
 #openModalSlytherin,
 #openModalHufflepuff,
 #openModalRavenclaw {
@@ -122,22 +292,22 @@ p{
 }
 
 .info {
-width: 1000px;
-height: 500px;
-max-width: 100%;
-padding: 30px 50px;
-border-radius: 5px;
-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-text-align: center;
-opacity: 0;
-border: 2px solid white;
+  width: 1000px;
+  height: 500px;
+  max-width: 100%;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  opacity: 0;
+  border: 2px solid white;
 }
 .info {
-  background-color: #6A0000;
+  background-color: #6a0000;
 }
 .show {
-pointer-events: auto;
-opacity: 1;
+  pointer-events: auto;
+  opacity: 1;
 }
 #close {
   width: 100%;
@@ -150,16 +320,16 @@ opacity: 1;
 
 /* HOUSES */
 p {
-  font-family: 'Mouse Memoirs', sans-serif;
+  font-family: "Mouse Memoirs", sans-serif;
   color: #ffffff;
   font-size: 35px;
 }
 h1 {
   color: rgb(157, 135, 22);
-  font-family: 'Harry Potter', sans-serif;
+  font-family: "Harry Potter", sans-serif;
   font-size: 50px;
 }
-.container-houses{
+.container-houses {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -173,7 +343,7 @@ h1 {
   padding: 10px;
   transition: all 0.25s;
 }
-.caja:hover{
+.caja:hover {
   transform: translateY(-15px);
 }
 .caja img {
@@ -186,77 +356,78 @@ hr {
 .submit,
 #selectgenders,
 #selectSort {
-background-color: white;
-font-family:sans-serif;
-text-align: center;
-font-weight: bold;
-color: black;
-padding: 10px;
-margin: 10px;
-margin-top: 50px;
-border-radius: 20px;
-cursor: pointer;
+  background-color: white;
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 50px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .submit:hover {
-box-shadow: 0 12px 16px 0 rgba(212, 248, 10, 0.774), 0 17px 50px 0 rgba(255, 255, 255, 0.20)
+  box-shadow: 0 12px 16px 0 rgba(212, 248, 10, 0.774),
+    0 17px 50px 0 rgba(255, 255, 255, 0.2);
 }
 /*FILTROS POR CASA*/
 #filterContent {
-display: flex;
-flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .box {
-display: grid;
-align-content: space-between;
-justify-items: center;
-border: solid;
-border-radius: 30px;
-margin: 15px;
-margin-top: 25px;
-padding: 20px;
-background-color:rgba(241, 81, 95, 0.194);
-font-size: 25px;
-text-align: center;
-border-radius: 15px;
-cursor: pointer;
+  display: grid;
+  align-content: space-between;
+  justify-items: center;
+  border: solid;
+  border-radius: 30px;
+  margin: 15px;
+  margin-top: 25px;
+  padding: 20px;
+  background-color: rgba(241, 81, 95, 0.194);
+  font-size: 25px;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
 }
 .box:hover {
   background-color: #c7c7c7;
   color: black;
 }
 .box h5 {
-font-size: 100%;
-font-weight: lighter;
-color: #c7940a;
+  font-size: 100%;
+  font-weight: lighter;
+  color: #c7940a;
 }
 .box li {
-list-style: none;
-font-size: 90%;
+  list-style: none;
+  font-size: 90%;
 }
 .img-houses {
-width: 30%;
+  width: 30%;
 }
 .Gryffindor {
-content:  url(/src/image/Griffyndor.png);
-width: 40%;
+  content: url(./image/Griffyndor.png);
+  width: 40%;
 }
 .Slytherin {
-content: url(/src/image/Slytherin.png);
-width: 40%;
+  content: url(./image/Slytherin.png);
+  width: 40%;
 }
 .Hufflepuff {
-content: url(/src/image/Hufflepuff.png);
-width: 40%;
+  content: url(./image/Hufflepuff.png);
+  width: 40%;
 }
 .Ravenclaw {
-content: url(/src/image/Ravenclaw.png);
-width: 40%;
+  content: url(./image/Ravenclaw.png);
+  width: 40%;
 }
 .null {
-content: url();
-width: 40%;
-background: none;
+  content: url();
+  width: 40%;
+  background: none;
 }
 /* cajita personajes */
 h3 {
@@ -264,14 +435,14 @@ h3 {
   color: #f0c050;
   display: flex;
   justify-content: center;
-  font-family: 'Harry Potter', sans-serif;
+  font-family: "Harry Potter", sans-serif;
 }
 .page-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.product-container{
+.product-container {
   margin: 15px;
   padding: 2px 16px;
   position: relative;
@@ -281,8 +452,8 @@ h3 {
 .product-container img {
   border-radius: 15px;
 }
-.product-container:hover{
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.product-container:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   background-color: rgba(241, 81, 95, 0.194);
 }
 .product-container img {
@@ -366,7 +537,7 @@ footer {
   font-weight: bold;
   color: white;
 }
- .subscribe {
+.subscribe {
   width: 400px;
 }
 .subscribe h3 {
@@ -374,28 +545,29 @@ footer {
   font-family: sans-serif;
   font-size: 21px;
   justify-content: start;
-} 
+}
 .subscribe2 button {
   padding: 10px;
   width: 60%;
   border-radius: 5px;
   margin-top: 10px;
 }
-.subscribe2 input{
+.subscribe2 input {
   width: 55%;
-  margin-top:10px;
-  padding:10px;
+  margin-top: 10px;
+  padding: 10px;
 }
 .subscribe2 button {
   background-color: #c7940a;
   color: #ffffff;
-} 
+}
 @media screen and (max-width: 1100px) {
   .containerFooter {
     flex-wrap: wrap;
   }
   .footer2,
-  .footerAuthors,.subscribe {
+  .footerAuthors,
+  .subscribe {
     margin-top: 20px;
   }
 }

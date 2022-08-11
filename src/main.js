@@ -6,6 +6,22 @@ import {
   sortAtoZ,
   sortZtoA,
 } from "./data.js";
+//nav responsive
+
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+
+hamburger.addEventListener('click', ()=>{
+   //Animate Links
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+
+    //Hamburger Animation
+    hamburger.classList.toggle("toggle");
+});
 
 const divRoot = document.querySelector(".info");
 
@@ -139,38 +155,40 @@ submitAll.addEventListener("click", () => {
 
 //FILTER AND SHOW CHARACTERS ACCORDGIN TO SELECTED HOUSE
 
+
+
 let submitGryffindor = document.getElementById("submitGryffindor");
 submitGryffindor.addEventListener("click", () => {
   let hP = filterCharacterHouse(characters, "Gryffindor");
   showTemplate(hP);
 });
+/*
+function fn1(e){
+filtrado 
+show(filtrcdo)
+}
+
+const fn2 = ()=> console.log("adios")
+
+submitGryffindor.addEventListener("click", fn1);
+*/
 
 let submitSlytherin = document.getElementById("submitSlytherin");
 submitSlytherin.addEventListener("click", () => {
-
   let hP = filterCharacterHouse(characters, "Slytherin");
   showTemplate(hP);
-
-
 });
-
 let submitHufflepuff = document.getElementById("submitHufflepuff");
 submitHufflepuff.addEventListener("click", () => {
   let hP = filterCharacterHouse(characters, "Hufflepuff");
   showTemplate(hP);
 });
-
 let submitRavenclaw = document.getElementById("submitRavenclaw");
 submitRavenclaw.addEventListener("click", () => {
   let hP = filterCharacterHouse(characters, "Ravenclaw");
   showTemplate(hP);
 });
-
-
 // FILTER AND SHOW CHARACTERS ACCORDGIN TO SELECTED GENDER
-
-
-
 
 let gender = document.getElementById("selectgenders");
 gender.addEventListener("change", (event) => {
@@ -180,7 +198,6 @@ gender.addEventListener("change", (event) => {
 });
 
 // SORT AND SHOW CHARACTERS ACCORDGIN TO SELECTED SORT
-
 document.getElementById("selectSort").addEventListener("change", () => {
   const selectSort = document.getElementById("selectSort");
   const selectedValue = selectSort.value;
