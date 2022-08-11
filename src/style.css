@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  outline: 1px solid limegreen !important; 
 }
 /*
 * {
@@ -518,10 +517,18 @@ footer {
     visibility: hidden;
   }
   nav {
-    position: fixed;
+    position: absolute;
     z-index: 3;
     height: 10%; /*nav 10%*/
   }
+  /* .slider {
+    display: grid;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    align-items: center;
+    height: auto;
+  } */
   .hamburger {
     display: block;
     position: absolute;
@@ -533,7 +540,7 @@ footer {
     transition: all 0.7s ease;
   }
   .nav-links {
-    position: fixed;
+    position: absolute;
     background: #020202;
     height: 100vh;
     width: 100%;
@@ -606,3 +613,4 @@ footer {
 
 
 }
+
