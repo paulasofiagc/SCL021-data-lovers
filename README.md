@@ -11,11 +11,11 @@ seabird15.github.io/scl021-data-lovers/
 
 ### 1.- Como usuario principiante me gustaria que al seleccionar una casa de Hogwartz me muestre diferentes datos de interes sobre la misma:
 
-| Criterio de aceptación                                  | Terminado                                                             |   |   |   |
-|---------------------------------------------------------|-----------------------------------------------------------------------|---|---|---|
-| 1.Se visualizan botones mediante el logo de cada casa   | Crear botones con el logo de cada casa                                |   |   |   |
-| 2.Al hacer click se despliega la información de la casa | Se crea ventana modal con la info de la casa                          |   |   |   |
-| 3.Tener una data con la información de cada casa        | Extraer desde la data la información necesaria según el logo apretado |   |   |   |
+| Criterio de aceptación                                  | Terminado                                                             |
+|---------------------------------------------------------|-----------------------------------------------------------------------|
+| 1.Se visualizan botones mediante el logo de cada casa   | Crear botones con el logo de cada casa                                |
+| 2.Al hacer click se despliega la información de la casa | Se crea ventana modal con la info de la casa                          |
+| 3.Tener una data con la información de cada casa        | Extraer desde la data la información necesaria según el logo apretado |   
 
 ### 2.- Como usuario principiante me gustaria poder ver los personajes que pertenecen a cada casa
 | Criterio de aceptación                                                          | Terminado                                                           |   |   |   |
