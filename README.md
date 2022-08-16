@@ -1,4 +1,4 @@
-# DATA LOVERS - HOGWARTZ WIZARDS :sparkles:
+# :sparkles: DATA LOVERS - HOGWARTZ WIZARDS :sparkles:
 
 ## ABOUT THIS PROYECT
 
