@@ -38,7 +38,13 @@ seabird15.github.io/scl021-data-lovers/
 | 1- Mediante un selector se puede elegir el orden alfabético de manera ascendente o descendente | Se crea un select con dos opciones de filtrado "A-Z" y "Z-A"                |
 | 2- Permite ordenar alfabéticamente los nombres de los personajes de cada casa                  | Se ejecuta la función que ordena alfabéticamente según la casa seleccionada |
 |                                                                                                |                                                                             |
+
+## PROTOTIPO DE BAJA FIDELIDAD
+![](./src/image/prototipobajafidelidad.png)
+## PROTOTIPO DE ALTA FIDELIDAD
+
 ## PRODUCTO FINAL
+
 ### VERSIÓN PC
 ![](./src/image/capturaPantalla.png)
 ![](./src/image/capturaVentanaPC.png)
