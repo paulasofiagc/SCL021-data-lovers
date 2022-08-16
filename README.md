@@ -4,8 +4,8 @@
 
 El sitio **_HogwartzWizard_** permite al usuario obtener información filtrada acerca del universo de Harry Potter. 
 
-Link del proyecto:
-seabird15.github.io/scl021-data-lovers/
+- Link proyecto: [Ir al Sitio](https://seabird15.github.io/SCL021-data-lovers/)
+
 
 ## HISTORIAS DE USUARIO 
 
