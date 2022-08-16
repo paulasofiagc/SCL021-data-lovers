@@ -6,7 +6,7 @@ export default {
       "name": "Gryffindor",
       "head_of_house": "Minerva McGonagall",
       "colors": "Scarlet red and gold",
-      "representative animal": "Lion",
+      "representative_animal": "Lion",
       "founder": "Godric Gryffindor ",
       "ghost": "Nearly Headless Nick",
       "element": "Fire"
@@ -16,7 +16,7 @@ export default {
       "name": "Hufflepuff",
       "head_of_house": "Pomona Sprout",
       "colors": "Yellow and black",
-      "representative animal": "Badger",
+      "representative_animal": "Badger",
       "founder": "Helga Hufflepuff",
       "ghost": "The Fat Friar",
       "element": "Land"
@@ -26,7 +26,7 @@ export default {
       "name": "Ravenclaw",
       "head_of_house": "Filius Flitwick",
       "colors": "Blue and bronze",
-      "representative animal": "Eagle",
+      "representative_animal": "Eagle",
       "founder": "Rowena Ravenclaw",
       "ghost": "Gray Lady",
       "element": "Air"
@@ -36,7 +36,7 @@ export default {
       "name": "Slytherin",
       "head_of_house": "Severus Snape",
       "colors": "Green and silver",
-      "representative animal": "Snake",
+      "representative_animal": "Snake",
       "founder": "Salazar Slytherin",
       "ghost": "Bloodthirsty Baron",
       "element": "Water"
