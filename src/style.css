@@ -9,7 +9,7 @@
 
 body {
   background: black;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }
 /*Slider*/
 .slider {
@@ -72,7 +72,7 @@ body {
 /* NAV */
 nav {
   height: 6rem;
-  width: 100vw;
+  width: 100%;
   background-color: #131418;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -90,7 +90,6 @@ nav {
   height: 5rem;
   width: 20rem;
 }
-
 /*Styling Links*/
 .nav-links {
   display: flex;
@@ -206,7 +205,7 @@ p {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
+/*VENTANA MODAL*/
 #openModalGryffindor,
 #openModalSlytherin,
 #openModalHufflepuff,
@@ -227,7 +226,6 @@ p {
   width: 100vw;
   cursor: pointer;
 }
-
 .info {
   width: 1000px;
   height: 500px;
@@ -240,7 +238,8 @@ p {
   border: 2px solid white;
 }
 .info {
-  background-color: #6a0000;
+  background-image: url(/src/image/fondoVentana.webp);
+  background-size: cover;
 }
 .show {
   pointer-events: auto;
@@ -258,11 +257,15 @@ p {
 /* HOUSES */
 p {
   font-family: "Mouse Memoirs", sans-serif;
-  color: #ffffff;
+  color: #040404;
   font-size: 35px;
 }
+.ulFade{
+  background-color: #c7c7c741;
+  border-radius: 4px;
+}
 h1 {
-  color: rgb(157, 135, 22);
+  color: rgb(38, 47, 143);
   font-family: "Harry Potter", sans-serif;
   font-size: 50px;
 }
@@ -304,7 +307,6 @@ hr {
   border-radius: 20px;
   cursor: pointer;
 }
-
 .submit:hover {
   box-shadow: 0 12px 16px 0 rgba(212, 248, 10, 0.774),
     0 17px 50px 0 rgba(255, 255, 255, 0.2);
@@ -318,12 +320,13 @@ hr {
   display: grid;
   align-content: space-between;
   justify-items: center;
-  border: solid;
+  border: solid #c7940a;
   border-radius: 30px;
   margin: 15px;
   margin-top: 25px;
   padding: 20px;
-  background-color: rgba(241, 81, 95, 0.194);
+  background-image: url(/src/image/fondoCards2.jpg);
+  background-size: cover;
   font-size: 25px;
   text-align: center;
   border-radius: 15px;
@@ -333,14 +336,21 @@ hr {
   background-color: #c7c7c7;
   color: black;
 }
+.characterBox{
+  background-color: #c7c7c7b7;
+  border-radius: 5px;
+  padding: 2px;
+}
 .box h5 {
-  font-size: 100%;
+  font-size: 30px;
   font-weight: lighter;
-  color: #c7940a;
+  color: #fffdf5;
+  padding: 4px;
 }
 .box li {
   list-style: none;
   font-size: 90%;
+  color:#000000;
 }
 .img-houses {
   width: 30%;
@@ -522,14 +532,6 @@ footer {
     height: 10%; /*nav 10%*/
     background: none;
   }
-  /* .slider {
-    display: grid;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-    align-items: center;
-    height: auto;
-  } */
   .hamburger {
     display: block;
     position: absolute;

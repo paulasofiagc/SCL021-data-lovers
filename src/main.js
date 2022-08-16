@@ -36,7 +36,8 @@ function showModal(house) {
   newButton.innerHTML = "X";
   newButton.id = "close";
   const newUl = document.createElement("ul");
-  const newLi = document.createElement("p"); 
+  newUl.className+= "ulFade";
+  const newLi = document.createElement("p");
   const head = document.createTextNode("Head: " + house.head_of_house);
   const newLi2 = document.createElement("p");
   const colors = document.createTextNode("Colors: " + house.colors);
@@ -134,6 +135,7 @@ function showTemplate(characters) {
       (c) =>
         ` <div class="box">
         <img class="img-houses ${c.house}"/>
+        <div class="characterBox">
         <h5>Name: ${c.name}</h5>
         <ul>
         <li>Gender: ${c.gender}</li>
@@ -142,6 +144,7 @@ function showTemplate(characters) {
         <li>Books in which it appears: ${c.books_featured_in}</li>
         <li>House: ${c.house}</li>
         </ul>
+        </div>
     </div>`
     )
     .join("");
