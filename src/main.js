@@ -38,7 +38,7 @@ function showModal(house) {
   const newUl = document.createElement("ul");
   newUl.className+= "ulFade";
   const newLi = document.createElement("p");
-  const head = document.createTextNode("Head: " + house.head_of_house);
+  const head = document.createTextNode("Head of household: " + house.head_of_house);
   const newLi2 = document.createElement("p");
   const colors = document.createTextNode("Colors: " + house.colors);
   const newLi3 = document.createElement("p");

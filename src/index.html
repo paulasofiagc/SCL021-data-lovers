@@ -28,10 +28,10 @@
       <ul class="nav-links">
           <li><a href="#">Home</a></li>
           <li><a href="#container-houses">Houses</a></li>
-          <li><a href="#galeria">Characters</a></li>
+          <li><a href="#character">Characters</a></li>
           <li><a href="#">Spells</a></li>
-          <li><button class="login-button" href="#subscribe2">Login</button></li>
-          <li><button class="join-button" href="#">Join</button></li>
+          <li><button class="login-button">Login</button></li>
+          <li><button class="join-button">Join</button></li>
       </ul>
   </nav>
       <section class="slider">
@@ -49,19 +49,19 @@
   
   <main>
     <h2 id="container-houses">HOUSES OF HOGWARTS</h2>
-        <p>Click on the houses!! for information</p>
+        <p class="pHtml">Click on the houses for information</p>
         
     <section class="container-houses">
-      <div class="caja">
+      <div class="boxBtn">
       <button type="button" id="openModalGryffindor"> <img src="image/gryffindorgif.gif" height ="306px" width="299px" /></button>
       </div>
-      <div class="caja">
+      <div class="boxBtn">
         <button type="button" id="openModalSlytherin"> <img src="image/Slytheringif.gif" height ="306px" width="299px" /></button>
       </div>
-      <div class="caja">
+      <div class="boxBtn">
         <button type="button" id="openModalHufflepuff"> <img src="image/Hufflepufgif.gif" height ="306px" width="299px" /></button>
       </div>
-      <div class="caja">
+      <div class="boxBtn">
 
         <button type="button" id="openModalRavenclaw"> <img src="image/ravenclawgif.gif" height ="306px" width="299px" /></button>
       </div>
@@ -70,10 +70,10 @@
     <section class="info">
     </section>
     </div>
-    <section class="galeria">
-        <h2 class="galeria" id="galeria">CHARACTERS</h2>
-        <p class="pHtml">Despliega los personajes por casa</p>
-        <section class="character">
+    <section>
+        <h2 id="character">CHARACTERS</h2>
+        <p class="pHtml">Show characters according to houses</p>
+        <section class="characterFilter">
           <button class="submit" value="All" id="submitAll">All</button>
           <button class="submit" value="Gryffindor" id="submitGryffindor">Show Characters Gryffindor</button>
           <button class="submit" value="Slytherin" id="submitSlytherin">Show Characters Slytherin</button>
@@ -90,10 +90,9 @@
             <option value="Z-A">Sort from Z-A</option>
           </select>
         </section>
-      <div class="tarjetapersonaje"></div>
+      <div>
       <p class="filterContent" id="filterContent"></p>
-
-            <!-- cajita personajes -->
+            <!-- characters box -->
             <div class="page-content">
               <div class="product-container">
                   <h3>Harry Potter</h3>
@@ -120,6 +119,7 @@
                   <img src="./image/lunalovegood.PNG" alt="">
               </div>
               </div>
+      </div>
     </section>
               <br>
   
@@ -151,7 +151,7 @@
       </div>
       <div class="subscribe">
         <h3>Newsletter</h3>
-         <div class="subscribe2">
+         <div class="subscribe2" id="subscribe2">
           <input type="email" placeholder="Your email id here" />
           <button>Subscribe</button>
          </div>
@@ -165,10 +165,7 @@
         </div>
     </div>
 </div>
-
   </footer>
-
-  <div id="root"></div>
   <script src="main.js" type="module"></script>
 </body>
 </html>
