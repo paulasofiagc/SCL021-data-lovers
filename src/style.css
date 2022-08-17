@@ -86,10 +86,6 @@ nav {
   padding: 1vh 1vw;
   text-align: center;
 }
-.logoNav img {
-  height: 5rem;
-  width: 20rem;
-}
 /*Styling Links*/
 .nav-links {
   display: flex;
@@ -356,23 +352,23 @@ hr {
   width: 30%;
 }
 .Gryffindor {
-  content: url(./image/Griffyndor.png);
+  content: url(./image/Griffyndor\(1\).png);
   width: 40%;
 }
 .Slytherin {
-  content: url(./image/Slytherin.png);
+  content: url(./image/Slytherin\(1\).png);
   width: 40%;
 }
 .Hufflepuff {
-  content: url(./image/Hufflepuff.png);
+  content: url(./image/Hufflepuff\(1\).png);
   width: 40%;
 }
 .Ravenclaw {
-  content: url(./image/Ravenclaw.png);
+  content: url(./image/Ravenclaw\(1\).png);
   width: 40%;
 }
 .null {
-  content: url();
+  content: url(./image/Escudo.png);
   width: 40%;
   background: none;
 }
