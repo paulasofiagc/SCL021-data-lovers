@@ -54,8 +54,7 @@ El sitio **_HogwartzWizard_** permite al usuario obtener información filtrada a
 ### MODELO RESPONSIVE
 ![](./src/image/Responsive.png)
 
-![](./src/image/capturaTelefono1.png)
-![](./src/image/capturaTelefono2.png)
+
 
 
 ### TEST UNITARIOS
