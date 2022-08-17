@@ -7,7 +7,7 @@ El sitio **_HogwartzWizard_** permite al usuario obtener información filtrada a
 - Link proyecto: [Ir al Sitio](https://seabird15.github.io/SCL021-data-lovers/)
 
 
-## HISTORIAS DE USUARIO  :sparkles:
+## :sparkles: HISTORIAS DE USUARIO  
 
 ### 1.- Como usuario principiante me gustaria que al seleccionar una casa de Hogwartz me muestre diferentes datos de interes sobre la misma:
 
@@ -37,7 +37,7 @@ El sitio **_HogwartzWizard_** permite al usuario obtener información filtrada a
 | 1- Mediante un selector se puede elegir el orden alfabético de manera ascendente o descendente | Se crea un select con dos opciones de filtrado "A-Z" y "Z-A"                |
 | 2- Permite ordenar alfabéticamente los nombres de los personajes de cada casa                  | Se ejecuta la función que ordena alfabéticamente según la casa seleccionada |
 |                                                                                                |                                                                             |
-## INTERFAZ DE USUARIO :sparkles:
+## :sparkles: INTERFAZ DE USUARIO 
 ### PROTOTIPO DE BAJA FIDELIDAD
 ![](./src/image/prototipobajafidelidad.png)
 ### PROTOTIPO DE ALTA FIDELIDAD
@@ -45,8 +45,7 @@ El sitio **_HogwartzWizard_** permite al usuario obtener información filtrada a
 - Link Prototipo: [Ir al Sitio](https://www.figma.com/proto/lKn0uDFyhiA8eBR6iqLzky/Untitled?node-id=54%3A41&scaling=scale-down-width&page-id=0%3A1&starting-point-node-id=2%3A2)
 
 
-## PRODUCTO FINAL :sparkles:
-
+## :sparkles: PRODUCTO FINAL 
 ### VERSIÓN PC
 ![](./src/image/capturaPantalla.png)
 ![](./src/image/capturaVentanaPC.png)
@@ -57,7 +56,7 @@ El sitio **_HogwartzWizard_** permite al usuario obtener información filtrada a
 
 
 
-### TEST UNITARIOS :sparkles:
+## :sparkles: TEST UNITARIOS 
 ![](./src/image/tests.png)
 
 
