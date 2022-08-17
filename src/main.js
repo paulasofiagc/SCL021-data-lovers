@@ -54,8 +54,6 @@ function showModal(house) {
   divRoot.innerHTML = "";
   divRoot.appendChild(newDivTitle);
   newDivTitle.appendChild(newButton);
-  /*   newDivTitle.appendChild(newImage);
-  newImage.appendChild(houseimage); */
   newDivTitle.appendChild(newH1Title);
   newH1Title.appendChild(newTextTitle);
   newDivTitle.appendChild(newUl);
@@ -158,23 +156,11 @@ submitAll.addEventListener("click", () => {
 
 //FILTER AND SHOW CHARACTERS ACCORDGIN TO SELECTED HOUSE
 
-
-
 let submitGryffindor = document.getElementById("submitGryffindor");
 submitGryffindor.addEventListener("click", () => {
   let hP = filterCharacterHouse(characters, "Gryffindor");
   showTemplate(hP);
 });
-/*
-function fn1(e){
-filtrado 
-show(filtrcdo)
-}
-
-const fn2 = ()=> console.log("adios")
-
-submitGryffindor.addEventListener("click", fn1);
-*/
 
 let submitSlytherin = document.getElementById("submitSlytherin");
 submitSlytherin.addEventListener("click", () => {
