@@ -37,10 +37,10 @@ El sitio **_HogwartzWizard_** permite al usuario obtener información filtrada a
 | 1- Mediante un selector se puede elegir el orden alfabético de manera ascendente o descendente | Se crea un select con dos opciones de filtrado "A-Z" y "Z-A"                |
 | 2- Permite ordenar alfabéticamente los nombres de los personajes de cada casa                  | Se ejecuta la función que ordena alfabéticamente según la casa seleccionada |
 |                                                                                                |                                                                             |
-
-## PROTOTIPO DE BAJA FIDELIDAD
+## INTERFAZ DE USUARIO
+### PROTOTIPO DE BAJA FIDELIDAD
 ![](./src/image/prototipobajafidelidad.png)
-## PROTOTIPO DE ALTA FIDELIDAD
+### PROTOTIPO DE ALTA FIDELIDAD
 
 - Link Prototipo: [Ir al Sitio](https://www.figma.com/proto/lKn0uDFyhiA8eBR6iqLzky/Untitled?node-id=54%3A41&scaling=scale-down-width&page-id=0%3A1&starting-point-node-id=2%3A2)
 
