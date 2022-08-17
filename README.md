@@ -1,6 +1,6 @@
 # :sparkles: DATA LOVERS - HOGWARTZ WIZARDS :sparkles:
 
-## ABOUT THIS PROYECT :sparkles:
+## :sparkles: ABOUT THIS PROYECT
 
 El sitio **_HogwartzWizard_** permite al usuario obtener información filtrada acerca del universo de Harry Potter. 
 
